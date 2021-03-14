@@ -11,6 +11,13 @@
 		BE17BA1E25FDA9A600BDF5C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE17BA1C25FDA9A600BDF5C7 /* Main.storyboard */; };
 		BE17BA2025FDA9A800BDF5C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17BA1F25FDA9A800BDF5C7 /* Assets.xcassets */; };
 		BE17BA2325FDA9A800BDF5C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE17BA2125FDA9A800BDF5C7 /* LaunchScreen.storyboard */; };
+		BEAFBC4525FDC4AF0076344C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC4425FDC4AF0076344C /* HomeViewController.swift */; };
+		BEAFBC4B25FDCAC30076344C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC4A25FDCAC30076344C /* UIViewController.swift */; };
+		BEAFBC5425FDCC9C0076344C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC5325FDCC9C0076344C /* Movie.swift */; };
+		BEAFBC5D25FDCED30076344C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC5C25FDCED30076344C /* Api.swift */; };
+		BEAFBC6325FDCFEE0076344C /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC6225FDCFEE0076344C /* Configs.swift */; };
+		BEAFBC6B25FDE1690076344C /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAFBC6A25FDE1690076344C /* MovieCell.xib */; };
+		BEAFBC7025FDE1880076344C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC6F25FDE1880076344C /* MovieCell.swift */; };
 		E2FFAD7E8BF151B4724D8DFE /* Pods_MonstarMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA64900BE61856C51B4320A7 /* Pods_MonstarMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +49,13 @@
 		BE17BA2425FDA9A800BDF5C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE17BA2925FDA9A800BDF5C7 /* MonstarMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonstarMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17BA3425FDA9A800BDF5C7 /* MonstarMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonstarMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEAFBC4425FDC4AF0076344C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BEAFBC4A25FDCAC30076344C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		BEAFBC5325FDCC9C0076344C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		BEAFBC5C25FDCED30076344C /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		BEAFBC6225FDCFEE0076344C /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		BEAFBC6A25FDE1690076344C /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		BEAFBC6F25FDE1880076344C /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		DC6090AAB1DFCBA71F8B1CFA /* Pods-MonstarMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonstarMovies.release.xcconfig"; path = "Target Support Files/Pods-MonstarMovies/Pods-MonstarMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,8 +130,55 @@
 				BE17BA1F25FDA9A800BDF5C7 /* Assets.xcassets */,
 				BE17BA2125FDA9A800BDF5C7 /* LaunchScreen.storyboard */,
 				BE17BA2425FDA9A800BDF5C7 /* Info.plist */,
+				BEAFBC4325FDC4380076344C /* Home */,
+				BEAFBC5225FDCC7E0076344C /* Models */,
+				BEAFBC5B25FDCED30076344C /* Networking */,
+				BEAFBC6125FDCFDE0076344C /* Utils */,
+				BEAFBC4925FDCAAF0076344C /* Extensions */,
 			);
 			path = MonstarMovies;
+			sourceTree = "<group>";
+		};
+		BEAFBC4325FDC4380076344C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BEAFBC4425FDC4AF0076344C /* HomeViewController.swift */,
+				BEAFBC6A25FDE1690076344C /* MovieCell.xib */,
+				BEAFBC6F25FDE1880076344C /* MovieCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BEAFBC4925FDCAAF0076344C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEAFBC4A25FDCAC30076344C /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BEAFBC5225FDCC7E0076344C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BEAFBC5325FDCC9C0076344C /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEAFBC5B25FDCED30076344C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BEAFBC5C25FDCED30076344C /* Api.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BEAFBC6125FDCFDE0076344C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BEAFBC6225FDCFEE0076344C /* Configs.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +288,7 @@
 			files = (
 				BE17BA2325FDA9A800BDF5C7 /* LaunchScreen.storyboard in Resources */,
 				BE17BA2025FDA9A800BDF5C7 /* Assets.xcassets in Resources */,
+				BEAFBC6B25FDE1690076344C /* MovieCell.xib in Resources */,
 				BE17BA1E25FDA9A600BDF5C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAFBC7025FDE1880076344C /* MovieCell.swift in Sources */,
 				BE17BA1725FDA9A600BDF5C7 /* AppDelegate.swift in Sources */,
+				BEAFBC4525FDC4AF0076344C /* HomeViewController.swift in Sources */,
+				BEAFBC5425FDCC9C0076344C /* Movie.swift in Sources */,
+				BEAFBC5D25FDCED30076344C /* Api.swift in Sources */,
+				BEAFBC4B25FDCAC30076344C /* UIViewController.swift in Sources */,
+				BEAFBC6325FDCFEE0076344C /* Configs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
