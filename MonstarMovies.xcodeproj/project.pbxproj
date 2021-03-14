@@ -15,6 +15,7 @@
 		BE17BA2325FDA9A800BDF5C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE17BA2125FDA9A800BDF5C7 /* LaunchScreen.storyboard */; };
 		BE17BA2E25FDA9A800BDF5C7 /* MonstarMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17BA2D25FDA9A800BDF5C7 /* MonstarMoviesTests.swift */; };
 		BE17BA3925FDA9A800BDF5C7 /* MonstarMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17BA3825FDA9A800BDF5C7 /* MonstarMoviesUITests.swift */; };
+		E2FFAD7E8BF151B4724D8DFE /* Pods_MonstarMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA64900BE61856C51B4320A7 /* Pods_MonstarMovies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5DA8FAC243E16B352DAAF781 /* Pods-MonstarMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonstarMovies.debug.xcconfig"; path = "Target Support Files/Pods-MonstarMovies/Pods-MonstarMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		BA64900BE61856C51B4320A7 /* Pods_MonstarMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonstarMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17BA1325FDA9A600BDF5C7 /* MonstarMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonstarMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17BA1625FDA9A600BDF5C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE17BA1825FDA9A600BDF5C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		BE17BA3425FDA9A800BDF5C7 /* MonstarMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonstarMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17BA3825FDA9A800BDF5C7 /* MonstarMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstarMoviesUITests.swift; sourceTree = "<group>"; };
 		BE17BA3A25FDA9A800BDF5C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6090AAB1DFCBA71F8B1CFA /* Pods-MonstarMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonstarMovies.release.xcconfig"; path = "Target Support Files/Pods-MonstarMovies/Pods-MonstarMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2FFAD7E8BF151B4724D8DFE /* Pods_MonstarMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0891309D477F440B8E0B3FD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8FAC243E16B352DAAF781 /* Pods-MonstarMovies.debug.xcconfig */,
+				DC6090AAB1DFCBA71F8B1CFA /* Pods-MonstarMovies.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1D59012B97F354F609E29EC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA64900BE61856C51B4320A7 /* Pods_MonstarMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE17BA0A25FDA9A600BDF5C7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				BE17BA2C25FDA9A800BDF5C7 /* MonstarMoviesTests */,
 				BE17BA3725FDA9A800BDF5C7 /* MonstarMoviesUITests */,
 				BE17BA1425FDA9A600BDF5C7 /* Products */,
+				0891309D477F440B8E0B3FD6 /* Pods */,
+				1D59012B97F354F609E29EC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE17BA3D25FDA9A800BDF5C7 /* Build configuration list for PBXNativeTarget "MonstarMovies" */;
 			buildPhases = (
+				BB385D3CC7C10233635116A2 /* [CP] Check Pods Manifest.lock */,
 				BE17BA0F25FDA9A600BDF5C7 /* Sources */,
 				BE17BA1025FDA9A600BDF5C7 /* Frameworks */,
 				BE17BA1125FDA9A600BDF5C7 /* Resources */,
+				EF7A28572BFAEBA76DF722CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB385D3CC7C10233635116A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MonstarMovies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7A28572BFAEBA76DF722CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MonstarMovies/Pods-MonstarMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MonstarMovies/Pods-MonstarMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MonstarMovies/Pods-MonstarMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE17BA0F25FDA9A600BDF5C7 /* Sources */ = {
@@ -433,6 +502,7 @@
 		};
 		BE17BA3E25FDA9A800BDF5C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA8FAC243E16B352DAAF781 /* Pods-MonstarMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +522,7 @@
 		};
 		BE17BA3F25FDA9A800BDF5C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC6090AAB1DFCBA71F8B1CFA /* Pods-MonstarMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
