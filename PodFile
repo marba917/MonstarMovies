@@ -7,4 +7,5 @@ pod 'Kingfisher'
 pod 'lottie-ios'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'SwiftyJSON'
 end
