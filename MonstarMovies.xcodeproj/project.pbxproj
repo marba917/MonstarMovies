@@ -12,6 +12,8 @@
 		BE17BA2025FDA9A800BDF5C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17BA1F25FDA9A800BDF5C7 /* Assets.xcassets */; };
 		BE17BA2325FDA9A800BDF5C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE17BA2125FDA9A800BDF5C7 /* LaunchScreen.storyboard */; };
 		BE6D618825FF996700ECEDDB /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D618725FF996700ECEDDB /* Genre.swift */; };
+		BE6D618E25FFA52D00ECEDDB /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE6D618C25FFA52D00ECEDDB /* DataModel.xcdatamodeld */; };
+		BE6D619425FFA68300ECEDDB /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D619325FFA68300ECEDDB /* DBManager.swift */; };
 		BEA5681B25FF025C00AC3FA2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA5681A25FF025C00AC3FA2 /* String.swift */; };
 		BEA5682325FF030500AC3FA2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA5682225FF030500AC3FA2 /* Date.swift */; };
 		BEA5682825FF0F4600AC3FA2 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA5682725FF0F4600AC3FA2 /* LoadingIndicatorView.swift */; };
@@ -57,6 +59,8 @@
 		BE17BA2925FDA9A800BDF5C7 /* MonstarMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonstarMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17BA3425FDA9A800BDF5C7 /* MonstarMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonstarMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6D618725FF996700ECEDDB /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		BE6D618D25FFA52D00ECEDDB /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		BE6D619325FFA68300ECEDDB /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		BEA5681A25FF025C00AC3FA2 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BEA5682225FF030500AC3FA2 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BEA5682725FF0F4600AC3FA2 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
@@ -151,8 +155,18 @@
 				BEAFBC5B25FDCED30076344C /* Networking */,
 				BEAFBC6125FDCFDE0076344C /* Utils */,
 				BEAFBC4925FDCAAF0076344C /* Extensions */,
+				BE6D619225FFA53900ECEDDB /* DataBase */,
 			);
 			path = MonstarMovies;
+			sourceTree = "<group>";
+		};
+		BE6D619225FFA53900ECEDDB /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				BE6D618C25FFA52D00ECEDDB /* DataModel.xcdatamodeld */,
+				BE6D619325FFA68300ECEDDB /* DBManager.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		BEA5683625FF2CBF00AC3FA2 /* Movie */ = {
@@ -389,6 +403,7 @@
 				BEAFBC7025FDE1880076344C /* MovieCell.swift in Sources */,
 				BEA5682825FF0F4600AC3FA2 /* LoadingIndicatorView.swift in Sources */,
 				BE17BA1725FDA9A600BDF5C7 /* AppDelegate.swift in Sources */,
+				BE6D618E25FFA52D00ECEDDB /* DataModel.xcdatamodeld in Sources */,
 				BEAFBC4525FDC4AF0076344C /* HomeViewController.swift in Sources */,
 				BEAFBC5425FDCC9C0076344C /* Movie.swift in Sources */,
 				BEA5681B25FF025C00AC3FA2 /* String.swift in Sources */,
@@ -399,6 +414,7 @@
 				BEA5682325FF030500AC3FA2 /* Date.swift in Sources */,
 				BEAFBC6325FDCFEE0076344C /* Configs.swift in Sources */,
 				BEA5683825FF2CD600AC3FA2 /* MovieViewController.swift in Sources */,
+				BE6D619425FFA68300ECEDDB /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +749,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE6D618C25FFA52D00ECEDDB /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE6D618D25FFA52D00ECEDDB /* DataModel.xcdatamodel */,
+			);
+			currentVersion = BE6D618D25FFA52D00ECEDDB /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE17BA0B25FDA9A600BDF5C7 /* Project object */;
 }

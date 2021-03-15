@@ -15,8 +15,14 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var yearLb: UILabel!
     @IBOutlet weak var overviewTv: UITextView!
     @IBOutlet weak var hashTagsLb: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var favoriteStar: UIImageView!
+    @IBOutlet weak var starHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var starWidthConstraint: NSLayoutConstraint!
     
     var movieId: Int?
+    var isFavorite = false
+    var movie: Movie?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,7 @@ class MovieViewController: UIViewController {
         }
         
         getMovie(id: movieId)
+        checkFavorite()
     }
     
 
@@ -37,6 +44,26 @@ class MovieViewController: UIViewController {
         
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func favoriteButtonCTA(_ sender: Any) {
+        
+        guard let movie = movie else { return }
+        
+        if isFavorite {
+            
+            DBManager.deleteMovie(movieId: movie.id)
+            favoriteButton.tintColor = .lightGray
+            isFavorite = false
+            
+        } else {
+            
+            DBManager.addMovie(movie: movie)
+            favoriteButton.tintColor = .systemYellow
+            isFavorite = true
+            animateStar()
+        }
+    }
+    
     
     // MARK: - Functions
 
@@ -59,6 +86,7 @@ class MovieViewController: UIViewController {
     
     private func setMovieInfo(movie: Movie) {
         
+        self.movie = movie
         let url = URL(string: movie.image)
         coverimage.kf.setImage(with: url)
         nameLb.text = movie.title
@@ -66,5 +94,38 @@ class MovieViewController: UIViewController {
         yearLb.text = String(movie.release_date.year)
         overviewTv.text = movie.overview
         hashTagsLb.text = movie.genres.reduce("") {text, name in "\(text ?? "") #\(name.name)"}
+    }
+    
+    private func checkFavorite() {
+        
+        let favorites = DBManager.getFavoriteMovies()
+        favorites.forEach { (movie) in
+            
+            if movieId == movie.id {
+                
+                favoriteButton.tintColor = .systemYellow
+                isFavorite = true
+                return
+            }
+        }
+    }
+    
+    private func animateStar() {
+        
+        starWidthConstraint.constant = 240
+        starHeightConstraint.constant = 240
+        
+        UIView.animate(withDuration: 0.8) {
+            
+            self.favoriteStar.alpha = 1
+            self.view.layoutIfNeeded()
+            
+        } completion: { (completion) in
+            
+            self.starWidthConstraint.constant = 0
+            self.starHeightConstraint.constant = 0
+            self.favoriteStar.alpha = 0
+        }
+
     }
 }

@@ -215,6 +215,25 @@
                                     <constraint firstAttribute="height" constant="300" id="9jg-me-TfD"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzD-RR-61m">
+                                <rect key="frame" x="24" y="68" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2F8-qB-OgD"/>
+                                    <constraint firstAttribute="height" constant="40" id="xg5-ai-30r"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="ic-star"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="favoriteButtonCTA:" destination="x0N-b2-itK" eventType="touchUpInside" id="wPb-rW-cQe"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-B0-lGg">
                                 <rect key="frame" x="350" y="68" width="40" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,6 +263,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-star" translatesAutoresizingMaskIntoConstraints="NO" id="4tN-mW-7yu">
+                                <rect key="frame" x="224.5" y="445.5" width="5" height="5"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="4Qg-l3-va6"/>
+                                    <constraint firstAttribute="width" constant="5" id="owp-FE-Jqx"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hashtags" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zll-W7-ClV">
                                 <rect key="frame" x="20" y="566" width="374" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -257,25 +284,33 @@
                             <constraint firstItem="NfR-B0-lGg" firstAttribute="top" secondItem="QHJ-8a-NCK" secondAttribute="top" constant="24" id="2cK-CM-TIc"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="vh6-NU-uto" secondAttribute="trailing" id="31A-0j-L6G"/>
                             <constraint firstItem="Sks-LW-Ejh" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" id="3Rr-uZ-eWq"/>
+                            <constraint firstItem="EzD-RR-61m" firstAttribute="top" secondItem="QHJ-8a-NCK" secondAttribute="top" constant="24" id="50W-uv-27Z"/>
                             <constraint firstItem="zll-W7-ClV" firstAttribute="top" secondItem="yO2-76-u9o" secondAttribute="bottom" constant="16" id="5HY-ex-Q1V"/>
                             <constraint firstItem="vh6-NU-uto" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" id="6NK-Uj-ir7"/>
                             <constraint firstItem="yO2-76-u9o" firstAttribute="top" secondItem="Sks-LW-Ejh" secondAttribute="bottom" constant="10" id="7WC-oX-elX"/>
                             <constraint firstItem="vh6-NU-uto" firstAttribute="top" secondItem="cmi-7D-f26" secondAttribute="top" id="7Zb-BM-qCO"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="Sks-LW-Ejh" secondAttribute="trailing" id="C6A-SP-stO"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="NfR-B0-lGg" secondAttribute="trailing" constant="24" id="CNE-q7-zXg"/>
+                            <constraint firstItem="EzD-RR-61m" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" constant="24" id="DZu-LY-2Ne"/>
+                            <constraint firstItem="4tN-mW-7yu" firstAttribute="centerY" secondItem="cmi-7D-f26" secondAttribute="centerY" id="eiv-Gk-uqS"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="zll-W7-ClV" secondAttribute="trailing" constant="20" id="kDa-XH-XdE"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="yO2-76-u9o" secondAttribute="trailing" constant="16" id="poZ-K5-0E6"/>
                             <constraint firstItem="Sks-LW-Ejh" firstAttribute="top" secondItem="vh6-NU-uto" secondAttribute="bottom" constant="10" id="rq1-gL-Xr2"/>
+                            <constraint firstItem="4tN-mW-7yu" firstAttribute="centerX" secondItem="cmi-7D-f26" secondAttribute="centerX" constant="20" id="u2e-7Q-06t"/>
                             <constraint firstItem="zll-W7-ClV" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" constant="20" id="v4C-yD-xjH"/>
                             <constraint firstItem="yO2-76-u9o" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" constant="16" id="zdT-Rb-QXt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coverimage" destination="vh6-NU-uto" id="2Ku-PU-P1L"/>
+                        <outlet property="favoriteButton" destination="EzD-RR-61m" id="Q00-Qr-WmZ"/>
+                        <outlet property="favoriteStar" destination="4tN-mW-7yu" id="LMl-MU-8Ct"/>
                         <outlet property="hashTagsLb" destination="zll-W7-ClV" id="eUe-5p-ydq"/>
                         <outlet property="nameLb" destination="u83-s1-eMZ" id="0DQ-x8-Em2"/>
                         <outlet property="overviewTv" destination="yO2-76-u9o" id="Fse-zM-IH4"/>
                         <outlet property="scoreLb" destination="HoW-qt-xFD" id="Jec-jg-Qyr"/>
+                        <outlet property="starHeightConstraint" destination="4Qg-l3-va6" id="QfD-aL-l3H"/>
+                        <outlet property="starWidthConstraint" destination="owp-FE-Jqx" id="qgd-Hv-l0W"/>
                         <outlet property="yearLb" destination="ET9-E6-zsf" id="1us-CR-6u3"/>
                     </connections>
                 </viewController>
