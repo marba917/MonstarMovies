@@ -15,6 +15,7 @@ class Api {
         
         static let HOST = "https://api.themoviedb.org"
         static let movies = "\(HOST)/3/search/movie?api_key=\(Configs.theMovieDBApiKey)&query="
+        static let movie = "\(HOST)/3/movie"
     }
     
     enum ResponseType {
@@ -51,6 +52,28 @@ class Api {
                 } else {
                     
                     completionBlock(.error,[])
+                }
+        }
+    }
+    
+    static func getMovieInfo(id: Int, completionBlock: @escaping (ResponseType,Movie) -> Void) {
+        
+        let url = "\(Endpoints.movie)/\(id)?api_key=\(Configs.theMovieDBApiKey)"
+        
+        print("Getting movie info...\(url)")
+
+        AF.request(url, method: .get, parameters: nil)
+            .responseJSON { response in
+                
+                if let data = response.value {
+                    
+                    let json = JSON(data)
+                    let movie = Movie(withJSON: json)
+                    completionBlock(.success,movie)
+                    
+                } else {
+                    
+                    completionBlock(.error,Movie())
                 }
         }
     }

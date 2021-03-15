@@ -90,6 +90,19 @@ extension HomeViewController {
                         
         }.disposed(by: rxBag)
         
+        //CollectionView didSelect item
+        moviesCollectionView.rx.modelSelected(Movie.self)
+            .subscribe(onNext: { [weak self] (movie) in
+                
+                guard let self = self else { return }
+                print("Selected movie: \(movie.id)")
+                let vc = self.getVC(from: "Main", withId: "MovieViewController") as! MovieViewController
+                vc.movieId = movie.id
+                vc.setModalPresentation()
+                self.present(vc, animated: true, completion: nil)
+                
+            }).disposed(by: rxBag)
+        
     }
     
     private func searchMovies(query: String) {
