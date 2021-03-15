@@ -17,20 +17,67 @@
                 <rect key="frame" x="0.0" y="0.0" width="261" height="452"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EVX-7f-KNe">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EVX-7f-KNe">
                         <rect key="frame" x="0.0" y="0.0" width="261" height="452"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1P-ms-v6l">
+                        <rect key="frame" x="0.0" y="0.0" width="261" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-mm-C4K">
+                                <rect key="frame" x="16" y="16" width="167" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="X5R-3m-LyD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xec-6b-u9e">
+                                <rect key="frame" x="199" y="22" width="46" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="UHE-Oc-3Bl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Hv-0p-6AF">
+                                <rect key="frame" x="16" y="46" width="167" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xec-6b-u9e" firstAttribute="centerY" secondItem="u1P-ms-v6l" secondAttribute="centerY" id="3OO-Sk-y68"/>
+                            <constraint firstItem="8Hv-0p-6AF" firstAttribute="top" secondItem="UKb-mm-C4K" secondAttribute="bottom" constant="6" id="9At-t0-UPe"/>
+                            <constraint firstAttribute="trailing" secondItem="xec-6b-u9e" secondAttribute="trailing" constant="16" id="Bne-BA-4NR"/>
+                            <constraint firstItem="UKb-mm-C4K" firstAttribute="top" secondItem="u1P-ms-v6l" secondAttribute="top" constant="16" id="Psk-3a-Ujm"/>
+                            <constraint firstItem="8Hv-0p-6AF" firstAttribute="leading" secondItem="u1P-ms-v6l" secondAttribute="leading" constant="16" id="Tzw-A1-J7i"/>
+                            <constraint firstItem="xec-6b-u9e" firstAttribute="leading" secondItem="UKb-mm-C4K" secondAttribute="trailing" constant="16" id="WKi-p4-am5"/>
+                            <constraint firstItem="UKb-mm-C4K" firstAttribute="leading" secondItem="u1P-ms-v6l" secondAttribute="leading" constant="16" id="btC-Fw-Yuc"/>
+                            <constraint firstItem="xec-6b-u9e" firstAttribute="leading" secondItem="8Hv-0p-6AF" secondAttribute="trailing" constant="16" id="rUs-kM-lSu"/>
+                            <constraint firstAttribute="height" constant="80" id="sEh-yH-USs"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="EVX-7f-KNe" firstAttribute="top" secondItem="VOQ-5B-AiS" secondAttribute="top" id="E7i-gh-uAx"/>
+                    <constraint firstItem="u1P-ms-v6l" firstAttribute="top" secondItem="VOQ-5B-AiS" secondAttribute="top" id="Kx3-Sk-EB0"/>
+                    <constraint firstItem="EVX-7f-KNe" firstAttribute="top" secondItem="VOQ-5B-AiS" secondAttribute="top" id="Mbl-AW-QJp"/>
                     <constraint firstAttribute="trailing" secondItem="EVX-7f-KNe" secondAttribute="trailing" id="OGo-N6-ead"/>
                     <constraint firstAttribute="bottom" secondItem="EVX-7f-KNe" secondAttribute="bottom" id="Xoa-6Z-QD0"/>
                     <constraint firstItem="EVX-7f-KNe" firstAttribute="leading" secondItem="VOQ-5B-AiS" secondAttribute="leading" id="hYF-M3-urr"/>
+                    <constraint firstAttribute="trailing" secondItem="u1P-ms-v6l" secondAttribute="trailing" id="ivn-XM-QPq"/>
+                    <constraint firstItem="u1P-ms-v6l" firstAttribute="leading" secondItem="VOQ-5B-AiS" secondAttribute="leading" id="pO3-Cf-k5f"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="261" height="452"/>
             <connections>
+                <outlet property="nameLb" destination="UKb-mm-C4K" id="5bG-1B-qUZ"/>
                 <outlet property="posterImage" destination="EVX-7f-KNe" id="gQK-gP-6ji"/>
+                <outlet property="scoreLb" destination="xec-6b-u9e" id="SVa-aM-jnf"/>
+                <outlet property="yearLb" destination="8Hv-0p-6AF" id="zah-j4-agx"/>
             </connections>
             <point key="canvasLocation" x="-202.17391304347828" y="28.794642857142854"/>
         </collectionViewCell>

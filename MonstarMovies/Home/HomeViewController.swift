@@ -12,8 +12,10 @@ import RxSwift
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var searchTf: UITextField!
-    @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    @IBOutlet weak var messageView: UIView!
+    @IBOutlet weak var messageLb: UILabel!
+    @IBOutlet weak var searchViewWidthConstraint: NSLayoutConstraint!
     
     private let rxBag = DisposeBag()
     private let movies: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
@@ -22,14 +24,38 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         moviesCollectionView.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: "MovieCell")
-        let flowLayout = UICollectionViewFlowLayout()
-        let size = view.frame.size.width
-        flowLayout.itemSize = CGSize(width: size, height: moviesCollectionView.frame.height)
-        flowLayout.scrollDirection = .horizontal
-        moviesCollectionView.setCollectionViewLayout(flowLayout, animated: true)
-        
+        messageLb.text = "Search for movies using the button above..."
+        searchViewWidthConstraint.constant = 40
         subscribeRxElements()
     }
+}
+
+
+//MARK: - IBActions
+
+extension HomeViewController {
+    
+    @IBAction func searchButtonCTA(_ sender: Any) {
+        
+        searchViewWidthConstraint.constant = view.frame.width - 104
+        searchTf.becomeFirstResponder()
+        
+        UIView.animate(withDuration: 0.4) {
+            
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func favoritesButtonCTA(_ sender: Any) {
+        
+        
+    }
+}
+
+
+//MARK: - Functions
+
+extension HomeViewController {
     
     private func subscribeRxElements() {
         
@@ -60,22 +86,32 @@ class HomeViewController: UIViewController {
     
     private func searchMovies(query: String) {
         
-        //TODO: Show loading indicator
+        LoadingIndicatorView.show()
+        self.movies.accept([])
         
         Api.searchMovies(query: query) { [weak self] (response, movies) in
             
             guard let self = self else { return }
             
+            //Delay to show the search animation (you can remove it later)
+            self.delay(3.0) {
+                LoadingIndicatorView.hide()
+            }
+            
             if response == .success {
                 
                 if !movies.isEmpty {
                     
+                    self.configureCollectionViewLayout(itemsCount: movies.count)
                     self.movies.accept(movies)
-                    self.emptyView.alpha = 0
+                    self.messageView.alpha = 0
+                    self.moviesCollectionView.alpha = 1
                     
                 } else {
                     
-                    self.emptyView.alpha = 1
+                    self.messageView.alpha = 1
+                    self.moviesCollectionView.alpha = 0
+                    self.messageLb.text = "No movies found..."
                 }
                 
             } else {
@@ -84,5 +120,13 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
+    
+    private func configureCollectionViewLayout(itemsCount: Int) {
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        let size = itemsCount < 2 ? view.frame.size.width : view.frame.size.width - 40
+        flowLayout.itemSize = CGSize(width: size, height: moviesCollectionView.frame.height)
+        flowLayout.scrollDirection = .horizontal
+        moviesCollectionView.setCollectionViewLayout(flowLayout, animated: true)
+    }
 }
