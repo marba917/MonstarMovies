@@ -23,6 +23,7 @@ class MovieViewController: UIViewController {
     var movieId: Int?
     var isFavorite = false
     var movie: Movie?
+    var delegate: MovieDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,11 +63,14 @@ class MovieViewController: UIViewController {
             isFavorite = true
             animateStar()
         }
+        
+        delegate?.didUpdateFavoriteStatus()
     }
     
     
     // MARK: - Functions
 
+    //Retrieves movie info from the endpoint
     private func getMovie(id: Int) {
         
         Api.getMovieInfo(id: id) { [weak self] (response, movie) in
@@ -84,6 +88,7 @@ class MovieViewController: UIViewController {
         }
     }
     
+    //sets the movie info in the UI
     private func setMovieInfo(movie: Movie) {
         
         self.movie = movie
@@ -96,6 +101,7 @@ class MovieViewController: UIViewController {
         hashTagsLb.text = movie.genres.reduce("") {text, name in "\(text ?? "") #\(name.name)"}
     }
     
+    //Checks if the movie is already in my favorites list
     private func checkFavorite() {
         
         let favorites = DBManager.getFavoriteMovies()
@@ -110,6 +116,7 @@ class MovieViewController: UIViewController {
         }
     }
     
+    //star animation when the user sets the movie as favorite
     private func animateStar() {
         
         starWidthConstraint.constant = 240
@@ -128,4 +135,14 @@ class MovieViewController: UIViewController {
         }
 
     }
+}
+
+
+
+
+//MARK: - Delegate
+
+protocol MovieDelegate {
+    
+    func didUpdateFavoriteStatus()
 }

@@ -318,6 +318,86 @@
             </objects>
             <point key="canvasLocation" x="668.11594202898561" y="75.669642857142847"/>
         </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="FE6-v1-F4b">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="3zD-Ic-PhA" customClass="FavoritesViewController" customModule="MonstarMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nM3-Kl-X9b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCN-hl-rOl">
+                                <rect key="frame" x="0.0" y="396" width="414" height="500"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACu-IS-6Oo">
+                                        <rect key="frame" x="23" y="24" width="120.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgi-Nf-V1S">
+                                        <rect key="frame" x="350" y="18" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="k7s-xL-g9w"/>
+                                            <constraint firstAttribute="height" constant="40" id="zli-xo-0Vl"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic-close"/>
+                                        <connections>
+                                            <action selector="closeButtonCTA:" destination="3zD-Ic-PhA" eventType="touchUpInside" id="MUx-es-tTy"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="deI-QN-GRj">
+                                        <rect key="frame" x="24" y="74.5" width="366" height="385.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="deI-QN-GRj" firstAttribute="top" secondItem="ACu-IS-6Oo" secondAttribute="bottom" constant="24" id="4bQ-b1-r7M"/>
+                                    <constraint firstAttribute="height" constant="500" id="Kyc-db-NCs"/>
+                                    <constraint firstAttribute="bottom" secondItem="deI-QN-GRj" secondAttribute="bottom" constant="40" id="Owb-zn-RTQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fgi-Nf-V1S" secondAttribute="trailing" constant="24" id="ZvH-PH-ib9"/>
+                                    <constraint firstItem="fgi-Nf-V1S" firstAttribute="top" secondItem="nCN-hl-rOl" secondAttribute="top" constant="18" id="gNM-hn-FOI"/>
+                                    <constraint firstItem="ACu-IS-6Oo" firstAttribute="top" secondItem="nCN-hl-rOl" secondAttribute="top" constant="24" id="mET-M3-TSI"/>
+                                    <constraint firstItem="ACu-IS-6Oo" firstAttribute="leading" secondItem="nCN-hl-rOl" secondAttribute="leading" constant="23" id="nKW-wa-XKu"/>
+                                    <constraint firstAttribute="trailing" secondItem="deI-QN-GRj" secondAttribute="trailing" constant="24" id="pxb-4o-1Z8"/>
+                                    <constraint firstItem="deI-QN-GRj" firstAttribute="leading" secondItem="nCN-hl-rOl" secondAttribute="leading" constant="24" id="r9z-da-Hdv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wc9-0W-XYl">
+                                <rect key="frame" x="0.0" y="866" width="414" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="17c-tq-7Vs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aRd-sV-B7k"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aRd-sV-B7k" firstAttribute="trailing" secondItem="nCN-hl-rOl" secondAttribute="trailing" id="5dc-ol-mar"/>
+                            <constraint firstItem="nCN-hl-rOl" firstAttribute="leading" secondItem="aRd-sV-B7k" secondAttribute="leading" id="HXT-vI-bDT"/>
+                            <constraint firstAttribute="bottom" secondItem="Wc9-0W-XYl" secondAttribute="bottom" id="Pdh-AF-2Ov"/>
+                            <constraint firstAttribute="bottom" secondItem="nCN-hl-rOl" secondAttribute="bottom" id="UYM-co-Idm"/>
+                            <constraint firstItem="Wc9-0W-XYl" firstAttribute="leading" secondItem="aRd-sV-B7k" secondAttribute="leading" id="V87-O4-POr"/>
+                            <constraint firstItem="aRd-sV-B7k" firstAttribute="trailing" secondItem="Wc9-0W-XYl" secondAttribute="trailing" id="jgh-TJ-VVc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoView" destination="nCN-hl-rOl" id="4H2-Hs-Vzu"/>
+                        <outlet property="moviesTv" destination="deI-QN-GRj" id="sba-ip-tcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbH-Bz-Go4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="76"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic-close" width="24" height="24"/>

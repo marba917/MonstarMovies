@@ -56,7 +56,8 @@ extension HomeViewController {
     
     @IBAction func favoritesButtonCTA(_ sender: Any) {
         
-        
+        let vc = getVC(from: "Main", withId: "FavoritesViewController") as! FavoritesViewController
+        present(vc, animated: true, completion: nil)
     }
 }
 

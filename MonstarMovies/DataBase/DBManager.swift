@@ -79,6 +79,7 @@ public class DBManager {
             for object in result {
                 context.delete(object as! NSManagedObject)
             }
+            try context.save()
             
         } catch {
             

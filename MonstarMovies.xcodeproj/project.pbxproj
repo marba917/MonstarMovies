@@ -27,6 +27,9 @@
 		BEAFBC6325FDCFEE0076344C /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC6225FDCFEE0076344C /* Configs.swift */; };
 		BEAFBC6B25FDE1690076344C /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAFBC6A25FDE1690076344C /* MovieCell.xib */; };
 		BEAFBC7025FDE1880076344C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC6F25FDE1880076344C /* MovieCell.swift */; };
+		BEB1989125FFB47E00F2F12E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB1989025FFB47E00F2F12E /* FavoritesViewController.swift */; };
+		BEB1989C25FFB74B00F2F12E /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB1989B25FFB74B00F2F12E /* FavoriteCell.xib */; };
+		BEB198A125FFB8B100F2F12E /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB198A025FFB8B100F2F12E /* FavoriteCell.swift */; };
 		E2FFAD7E8BF151B4724D8DFE /* Pods_MonstarMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA64900BE61856C51B4320A7 /* Pods_MonstarMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +77,9 @@
 		BEAFBC6225FDCFEE0076344C /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		BEAFBC6A25FDE1690076344C /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		BEAFBC6F25FDE1880076344C /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		BEB1989025FFB47E00F2F12E /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		BEB1989B25FFB74B00F2F12E /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
+		BEB198A025FFB8B100F2F12E /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		DC6090AAB1DFCBA71F8B1CFA /* Pods-MonstarMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonstarMovies.release.xcconfig"; path = "Target Support Files/Pods-MonstarMovies/Pods-MonstarMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +157,7 @@
 				BEA5682C25FF114500AC3FA2 /* loading.json */,
 				BEAFBC4325FDC4380076344C /* Home */,
 				BEA5683625FF2CBF00AC3FA2 /* Movie */,
+				BEB1988F25FFB46B00F2F12E /* Favorites */,
 				BEAFBC5225FDCC7E0076344C /* Models */,
 				BEAFBC5B25FDCED30076344C /* Networking */,
 				BEAFBC6125FDCFDE0076344C /* Utils */,
@@ -222,6 +229,16 @@
 				BEA5682725FF0F4600AC3FA2 /* LoadingIndicatorView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BEB1988F25FFB46B00F2F12E /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				BEB1989025FFB47E00F2F12E /* FavoritesViewController.swift */,
+				BEB1989B25FFB74B00F2F12E /* FavoriteCell.xib */,
+				BEB198A025FFB8B100F2F12E /* FavoriteCell.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +351,7 @@
 				BEAFBC6B25FDE1690076344C /* MovieCell.xib in Resources */,
 				BE17BA1E25FDA9A600BDF5C7 /* Main.storyboard in Resources */,
 				BEA5682D25FF114500AC3FA2 /* loading.json in Resources */,
+				BEB1989C25FFB74B00F2F12E /* FavoriteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,11 +428,13 @@
 				BEAFBC5D25FDCED30076344C /* Api.swift in Sources */,
 				BEA5683225FF213100AC3FA2 /* UIColor.swift in Sources */,
 				BEAFBC4B25FDCAC30076344C /* UIViewController.swift in Sources */,
+				BEB1989125FFB47E00F2F12E /* FavoritesViewController.swift in Sources */,
 				BE6D618825FF996700ECEDDB /* Genre.swift in Sources */,
 				BEA5682325FF030500AC3FA2 /* Date.swift in Sources */,
 				BEAFBC6325FDCFEE0076344C /* Configs.swift in Sources */,
 				BEA5683825FF2CD600AC3FA2 /* MovieViewController.swift in Sources */,
 				BE6D619425FFA68300ECEDDB /* DBManager.swift in Sources */,
+				BEB198A125FFB8B100F2F12E /* FavoriteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
