@@ -10,10 +10,11 @@ import UIKit
 class MovieViewController: UIViewController {
     
     @IBOutlet weak var coverimage: UIImageView!
-    @IBOutlet weak var overViewlb: UILabel!
     @IBOutlet weak var nameLb: UILabel!
     @IBOutlet weak var scoreLb: UILabel!
     @IBOutlet weak var yearLb: UILabel!
+    @IBOutlet weak var overviewTv: UITextView!
+    @IBOutlet weak var hashTagsLb: UILabel!
     
     var movieId: Int?
 
@@ -63,6 +64,7 @@ class MovieViewController: UIViewController {
         nameLb.text = movie.title
         scoreLb.text = String(movie.vote_average)
         yearLb.text = String(movie.release_date.year)
-        overViewlb.text = movie.overview
+        overviewTv.text = movie.overview
+        hashTagsLb.text = movie.genres.reduce("") {text, name in "\(text ?? "") #\(name.name)"}
     }
 }

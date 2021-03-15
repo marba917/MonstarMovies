@@ -16,6 +16,7 @@ struct Movie {
     var vote_average = 0.0
     var release_date = Date()
     var overview = ""
+    var genres = [Genre]()
 }
 
 extension Movie {
@@ -29,6 +30,7 @@ extension Movie {
         vote_average = json["vote_average"].doubleValue
         release_date = json["release_date"].stringValue.toDate
         overview = json["overview"].stringValue
+        genres = json["genres"].arrayValue.map{Genre(withJSON: $0)}
     }
 }
 

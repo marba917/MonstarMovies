@@ -234,10 +234,20 @@
                                     <action selector="favoritesButtonCTA:" destination="Gs6-Bq-wf7" eventType="touchUpInside" id="TzE-hL-OsR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hPM-FX-fzS">
-                                <rect key="frame" x="20" y="414" width="374" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yO2-76-u9o">
+                                <rect key="frame" x="16" y="400" width="382" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="AYW-Dd-Wgg"/>
+                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hashtags" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zll-W7-ClV">
+                                <rect key="frame" x="20" y="566" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -247,20 +257,24 @@
                             <constraint firstItem="NfR-B0-lGg" firstAttribute="top" secondItem="QHJ-8a-NCK" secondAttribute="top" constant="24" id="2cK-CM-TIc"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="vh6-NU-uto" secondAttribute="trailing" id="31A-0j-L6G"/>
                             <constraint firstItem="Sks-LW-Ejh" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" id="3Rr-uZ-eWq"/>
-                            <constraint firstItem="hPM-FX-fzS" firstAttribute="top" secondItem="Sks-LW-Ejh" secondAttribute="bottom" constant="24" id="4qr-7o-XIc"/>
+                            <constraint firstItem="zll-W7-ClV" firstAttribute="top" secondItem="yO2-76-u9o" secondAttribute="bottom" constant="16" id="5HY-ex-Q1V"/>
                             <constraint firstItem="vh6-NU-uto" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" id="6NK-Uj-ir7"/>
+                            <constraint firstItem="yO2-76-u9o" firstAttribute="top" secondItem="Sks-LW-Ejh" secondAttribute="bottom" constant="10" id="7WC-oX-elX"/>
                             <constraint firstItem="vh6-NU-uto" firstAttribute="top" secondItem="cmi-7D-f26" secondAttribute="top" id="7Zb-BM-qCO"/>
-                            <constraint firstItem="hPM-FX-fzS" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" constant="20" id="BTL-P8-Yck"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="Sks-LW-Ejh" secondAttribute="trailing" id="C6A-SP-stO"/>
                             <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="NfR-B0-lGg" secondAttribute="trailing" constant="24" id="CNE-q7-zXg"/>
-                            <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="hPM-FX-fzS" secondAttribute="trailing" constant="20" id="qeb-tn-hsf"/>
+                            <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="zll-W7-ClV" secondAttribute="trailing" constant="20" id="kDa-XH-XdE"/>
+                            <constraint firstItem="QHJ-8a-NCK" firstAttribute="trailing" secondItem="yO2-76-u9o" secondAttribute="trailing" constant="16" id="poZ-K5-0E6"/>
                             <constraint firstItem="Sks-LW-Ejh" firstAttribute="top" secondItem="vh6-NU-uto" secondAttribute="bottom" constant="10" id="rq1-gL-Xr2"/>
+                            <constraint firstItem="zll-W7-ClV" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" constant="20" id="v4C-yD-xjH"/>
+                            <constraint firstItem="yO2-76-u9o" firstAttribute="leading" secondItem="QHJ-8a-NCK" secondAttribute="leading" constant="16" id="zdT-Rb-QXt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coverimage" destination="vh6-NU-uto" id="2Ku-PU-P1L"/>
+                        <outlet property="hashTagsLb" destination="zll-W7-ClV" id="eUe-5p-ydq"/>
                         <outlet property="nameLb" destination="u83-s1-eMZ" id="0DQ-x8-Em2"/>
-                        <outlet property="overViewlb" destination="hPM-FX-fzS" id="1UH-Oh-Ttn"/>
+                        <outlet property="overviewTv" destination="yO2-76-u9o" id="Fse-zM-IH4"/>
                         <outlet property="scoreLb" destination="HoW-qt-xFD" id="Jec-jg-Qyr"/>
                         <outlet property="yearLb" destination="ET9-E6-zsf" id="1us-CR-6u3"/>
                     </connections>
@@ -276,6 +290,9 @@
         <image name="ic-star" width="27" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
