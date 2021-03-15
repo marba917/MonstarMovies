@@ -9,6 +9,6 @@ import UIKit
 
 public class Configs {
     
-    static let theMovieDBApiKey = "ff2c1d20fa50006ed38c9a704944dd3c"
-    static let postersUrl = "https://image.tmdb.org/t/p/w500"
+    static let theMovieDBApiKey = "ff2c1d20fa50006ed38c9a704944dd3c" //used to access themoviedb api
+    static let postersUrl = "https://image.tmdb.org/t/p/w500" //base url to display images
 }

@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageLb: UILabel!
     @IBOutlet weak var searchViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var favoritesButton: UIButton!
     
     private let rxBag = DisposeBag()
     private let movies: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
@@ -25,7 +26,13 @@ class HomeViewController: UIViewController {
 
         moviesCollectionView.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: "MovieCell")
         messageLb.text = "Search for movies using the button above..."
+        
+        //Set initial width to animate it later when button tapped
         searchViewWidthConstraint.constant = 40
+        
+        //Set a timer to randomly change button color
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(changeFavoritesButtonColor), userInfo: nil, repeats: true)
+        
         subscribeRxElements()
     }
 }
@@ -37,6 +44,7 @@ extension HomeViewController {
     
     @IBAction func searchButtonCTA(_ sender: Any) {
         
+        //Set the view width to use the entire view width (margin = 24)
         searchViewWidthConstraint.constant = view.frame.width - 104
         searchTf.becomeFirstResponder()
         
@@ -74,7 +82,7 @@ extension HomeViewController {
                 
             }).disposed(by: rxBag)
         
-        //CV contents
+        //Bind CV contents to the movies array
         movies.bind(to: moviesCollectionView.rx.items(cellIdentifier: "MovieCell")) { row, model, cell in
             
             guard let cell = cell as? MovieCell else { return }
@@ -124,9 +132,16 @@ extension HomeViewController {
     private func configureCollectionViewLayout(itemsCount: Int) {
         
         let flowLayout = UICollectionViewFlowLayout()
+        
+        //if movie count is more than 1, set the width a little shorter to let the user know there are more items
         let size = itemsCount < 2 ? view.frame.size.width : view.frame.size.width - 40
         flowLayout.itemSize = CGSize(width: size, height: moviesCollectionView.frame.height)
         flowLayout.scrollDirection = .horizontal
         moviesCollectionView.setCollectionViewLayout(flowLayout, animated: true)
+    }
+    
+    @objc private func changeFavoritesButtonColor() {
+        
+        favoritesButton.tintColor = .random()
     }
 }

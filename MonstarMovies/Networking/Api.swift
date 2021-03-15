@@ -41,6 +41,8 @@ class Api {
                 if let data = response.value {
                     
                     let json = JSON(data)
+                    
+                    //create an array of Movie objects
                     json["results"].arrayValue.forEach({ (movieJson) in
                         movies.append(Movie(withJSON: movieJson))
                     })

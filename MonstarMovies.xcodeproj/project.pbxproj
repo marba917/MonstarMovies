@@ -15,6 +15,7 @@
 		BEA5682325FF030500AC3FA2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA5682225FF030500AC3FA2 /* Date.swift */; };
 		BEA5682825FF0F4600AC3FA2 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA5682725FF0F4600AC3FA2 /* LoadingIndicatorView.swift */; };
 		BEA5682D25FF114500AC3FA2 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = BEA5682C25FF114500AC3FA2 /* loading.json */; };
+		BEA5683225FF213100AC3FA2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA5683125FF213100AC3FA2 /* UIColor.swift */; };
 		BEAFBC4525FDC4AF0076344C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC4425FDC4AF0076344C /* HomeViewController.swift */; };
 		BEAFBC4B25FDCAC30076344C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC4A25FDCAC30076344C /* UIViewController.swift */; };
 		BEAFBC5425FDCC9C0076344C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFBC5325FDCC9C0076344C /* Movie.swift */; };
@@ -57,6 +58,7 @@
 		BEA5682225FF030500AC3FA2 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BEA5682725FF0F4600AC3FA2 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		BEA5682C25FF114500AC3FA2 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		BEA5683125FF213100AC3FA2 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		BEAFBC4425FDC4AF0076344C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BEAFBC4A25FDCAC30076344C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BEAFBC5325FDCC9C0076344C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				BEAFBC4A25FDCAC30076344C /* UIViewController.swift */,
 				BEA5681A25FF025C00AC3FA2 /* String.swift */,
 				BEA5682225FF030500AC3FA2 /* Date.swift */,
+				BEA5683125FF213100AC3FA2 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				BEAFBC5425FDCC9C0076344C /* Movie.swift in Sources */,
 				BEA5681B25FF025C00AC3FA2 /* String.swift in Sources */,
 				BEAFBC5D25FDCED30076344C /* Api.swift in Sources */,
+				BEA5683225FF213100AC3FA2 /* UIColor.swift in Sources */,
 				BEAFBC4B25FDCAC30076344C /* UIViewController.swift in Sources */,
 				BEA5682325FF030500AC3FA2 /* Date.swift in Sources */,
 				BEAFBC6325FDCFEE0076344C /* Configs.swift in Sources */,

@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="height" constant="40" id="0RY-hS-yZW"/>
                                     <constraint firstAttribute="width" constant="40" id="X5I-1A-3Jc"/>
                                 </constraints>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="ic-star"/>
                                 <userDefinedRuntimeAttributes>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mQy-bI-lfI">
-                                <rect key="frame" x="0.0" y="118" width="414" height="778"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dyu-JY-7xu">
                                     <size key="itemSize" width="128" height="128"/>
@@ -135,7 +135,7 @@
                             <constraint firstItem="AzF-tK-dU7" firstAttribute="trailing" secondItem="ScX-Zd-uG8" secondAttribute="trailing" id="J0E-ri-T2I"/>
                             <constraint firstItem="ScX-Zd-uG8" firstAttribute="centerY" secondItem="JKX-zD-1v7" secondAttribute="centerY" id="Kur-oV-Fuo"/>
                             <constraint firstItem="gjR-0V-3PS" firstAttribute="top" secondItem="JKX-zD-1v7" secondAttribute="top" id="Q0d-8x-1pP"/>
-                            <constraint firstItem="mQy-bI-lfI" firstAttribute="top" secondItem="AzF-tK-dU7" secondAttribute="top" constant="74" id="Vf2-EQ-gbn"/>
+                            <constraint firstItem="mQy-bI-lfI" firstAttribute="top" secondItem="AzF-tK-dU7" secondAttribute="top" constant="80" id="Vf2-EQ-gbn"/>
                             <constraint firstItem="AzF-tK-dU7" firstAttribute="trailing" secondItem="gjR-0V-3PS" secondAttribute="trailing" id="bXU-jY-Y99"/>
                             <constraint firstItem="AzF-tK-dU7" firstAttribute="trailing" secondItem="mQy-bI-lfI" secondAttribute="trailing" id="dob-WD-G9A"/>
                             <constraint firstItem="t1h-84-GOe" firstAttribute="leading" secondItem="AzF-tK-dU7" secondAttribute="leading" constant="24" id="dvA-ug-qA5"/>
@@ -148,6 +148,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xt4-Iy-Tcl"/>
                     <connections>
+                        <outlet property="favoritesButton" destination="t1h-84-GOe" id="2T0-E2-huG"/>
                         <outlet property="messageLb" destination="oX4-p8-SId" id="zJw-Fx-00t"/>
                         <outlet property="messageView" destination="ScX-Zd-uG8" id="zqJ-Dc-9Ny"/>
                         <outlet property="moviesCollectionView" destination="mQy-bI-lfI" id="vnE-2z-uXq"/>
@@ -165,6 +166,9 @@
         <image name="ic-star" width="27" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
