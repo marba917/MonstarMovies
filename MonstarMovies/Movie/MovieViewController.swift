@@ -50,6 +50,8 @@ class MovieViewController: UIViewController {
         
         guard let movie = movie else { return }
         
+        //If the movie is already a favorite, removes it from DB and change UI
+        //If movie is not a favorite, save it in DB and update UI, also shows an animation
         if isFavorite {
             
             DBManager.deleteMovie(movieId: movie.id)
@@ -70,7 +72,7 @@ class MovieViewController: UIViewController {
     
     // MARK: - Functions
 
-    //Retrieves movie info from the endpoint
+    //Retrieves movie info from the Api and updates the UI with the response
     private func getMovie(id: Int) {
         
         Api.getMovieInfo(id: id) { [weak self] (response, movie) in

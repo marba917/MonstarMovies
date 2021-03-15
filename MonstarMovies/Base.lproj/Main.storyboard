@@ -335,6 +335,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to delete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqX-Jy-lhB">
+                                        <rect key="frame" x="24" y="50.5" width="125" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgi-Nf-V1S">
                                         <rect key="frame" x="350" y="18" width="40" height="40"/>
                                         <constraints>
@@ -348,21 +354,31 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="deI-QN-GRj">
-                                        <rect key="frame" x="24" y="74.5" width="366" height="385.5"/>
+                                        <rect key="frame" x="24" y="82.5" width="366" height="377.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorites yet..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-MJ-G1f">
+                                        <rect key="frame" x="140.5" y="239.5" width="133.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="deI-QN-GRj" firstAttribute="top" secondItem="ACu-IS-6Oo" secondAttribute="bottom" constant="24" id="4bQ-b1-r7M"/>
+                                    <constraint firstItem="deI-QN-GRj" firstAttribute="top" secondItem="ACu-IS-6Oo" secondAttribute="bottom" constant="32" id="4bQ-b1-r7M"/>
                                     <constraint firstAttribute="height" constant="500" id="Kyc-db-NCs"/>
                                     <constraint firstAttribute="bottom" secondItem="deI-QN-GRj" secondAttribute="bottom" constant="40" id="Owb-zn-RTQ"/>
+                                    <constraint firstItem="4gI-MJ-G1f" firstAttribute="centerY" secondItem="nCN-hl-rOl" secondAttribute="centerY" id="PPQ-BD-n9n"/>
+                                    <constraint firstItem="4gI-MJ-G1f" firstAttribute="centerX" secondItem="nCN-hl-rOl" secondAttribute="centerX" id="R1S-b2-VXT"/>
                                     <constraint firstAttribute="trailing" secondItem="fgi-Nf-V1S" secondAttribute="trailing" constant="24" id="ZvH-PH-ib9"/>
+                                    <constraint firstItem="uqX-Jy-lhB" firstAttribute="leading" secondItem="nCN-hl-rOl" secondAttribute="leading" constant="24" id="eUv-SC-YGl"/>
                                     <constraint firstItem="fgi-Nf-V1S" firstAttribute="top" secondItem="nCN-hl-rOl" secondAttribute="top" constant="18" id="gNM-hn-FOI"/>
                                     <constraint firstItem="ACu-IS-6Oo" firstAttribute="top" secondItem="nCN-hl-rOl" secondAttribute="top" constant="24" id="mET-M3-TSI"/>
                                     <constraint firstItem="ACu-IS-6Oo" firstAttribute="leading" secondItem="nCN-hl-rOl" secondAttribute="leading" constant="23" id="nKW-wa-XKu"/>
                                     <constraint firstAttribute="trailing" secondItem="deI-QN-GRj" secondAttribute="trailing" constant="24" id="pxb-4o-1Z8"/>
                                     <constraint firstItem="deI-QN-GRj" firstAttribute="leading" secondItem="nCN-hl-rOl" secondAttribute="leading" constant="24" id="r9z-da-Hdv"/>
+                                    <constraint firstItem="uqX-Jy-lhB" firstAttribute="top" secondItem="ACu-IS-6Oo" secondAttribute="bottom" id="tbe-3Z-5yZ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -392,6 +408,7 @@
                     <connections>
                         <outlet property="infoView" destination="nCN-hl-rOl" id="4H2-Hs-Vzu"/>
                         <outlet property="moviesTv" destination="deI-QN-GRj" id="sba-ip-tcB"/>
+                        <outlet property="noFavoritesLb" destination="4gI-MJ-G1f" id="f5Y-n8-1I1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbH-Bz-Go4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

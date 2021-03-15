@@ -28,6 +28,7 @@ class Api {
     
     //MARK: - Movies
     
+    //calls the search endpoint with the query parameter. Returns an array of movies or empty array
     static func searchMovies(query: String, completionBlock: @escaping (ResponseType,[Movie]) -> Void) {
         
         let text = query.replacingOccurrences(of: " ", with: "+")
@@ -56,6 +57,7 @@ class Api {
         }
     }
     
+    //obtains movie details from the endpoint. returns the movie object
     static func getMovieInfo(id: Int, completionBlock: @escaping (ResponseType,Movie) -> Void) {
         
         let url = "\(Endpoints.movie)/\(id)?api_key=\(Configs.theMovieDBApiKey)"

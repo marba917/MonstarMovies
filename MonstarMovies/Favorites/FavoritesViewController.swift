@@ -13,6 +13,7 @@ class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var moviesTv: UITableView!
+    @IBOutlet weak var noFavoritesLb: UILabel!
     
     private let rxBag = DisposeBag()
     private let movies: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
@@ -20,7 +21,10 @@ class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //register the cell nib so it can be used in the table
         moviesTv.register(UINib(nibName: "FavoriteCell", bundle: nil), forCellReuseIdentifier: "FavoriteCell")
+        
+        noFavoritesLb.alpha = 0
         subscribeRxElements()
         getMovies()
     }
@@ -61,12 +65,24 @@ class FavoritesViewController: UIViewController {
                 
             }).disposed(by: rxBag)
         
+        //Swipe to delete
+        moviesTv.rx.itemDeleted
+            .subscribe {
+                guard let row = $0.element?.row else { return }
+                let movie = self.movies.value[row]
+                print("delete movie : \(movie.title)")
+                DBManager.deleteMovie(movieId: movie.id)
+                self.getMovies()
+            }
+            .disposed(by: rxBag)
+        
     }
     
     private func getMovies() {
         
         let movies = DBManager.getFavoriteMovies()
         self.movies.accept(movies)
+        noFavoritesLb.alpha = movies.isEmpty ? 1 : 0
     }
 }
 

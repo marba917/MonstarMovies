@@ -26,11 +26,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="437-W1-tbZ">
                         <rect key="frame" x="100" y="0.0" width="314" height="84"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sdo-ST-aqF">
-                                <rect key="frame" x="16" y="16" width="282" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="zmm-Fi-Pux"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="sdo-ST-aqF">
+                                <rect key="frame" x="16" y="10" width="282" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="dJr-Me-myE">
-                                <rect key="frame" x="16" y="46" width="266" height="19.5"/>
+                                <rect key="frame" x="16" y="40" width="266" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -55,7 +52,7 @@
                         <constraints>
                             <constraint firstItem="upu-XQ-HoV" firstAttribute="leading" secondItem="sdo-ST-aqF" secondAttribute="trailing" id="9wQ-gi-IZB"/>
                             <constraint firstAttribute="trailing" secondItem="upu-XQ-HoV" secondAttribute="trailing" constant="16" id="H22-oM-fqB"/>
-                            <constraint firstItem="sdo-ST-aqF" firstAttribute="top" secondItem="437-W1-tbZ" secondAttribute="top" constant="16" id="QO2-Xf-r6L"/>
+                            <constraint firstItem="sdo-ST-aqF" firstAttribute="top" secondItem="437-W1-tbZ" secondAttribute="top" constant="10" id="QO2-Xf-r6L"/>
                             <constraint firstItem="sdo-ST-aqF" firstAttribute="leading" secondItem="437-W1-tbZ" secondAttribute="leading" constant="16" id="cCa-o6-AYG"/>
                             <constraint firstItem="upu-XQ-HoV" firstAttribute="leading" secondItem="dJr-Me-myE" secondAttribute="trailing" constant="16" id="uQa-iT-45Y"/>
                             <constraint firstItem="dJr-Me-myE" firstAttribute="leading" secondItem="437-W1-tbZ" secondAttribute="leading" constant="16" id="xP1-O9-CeY"/>
